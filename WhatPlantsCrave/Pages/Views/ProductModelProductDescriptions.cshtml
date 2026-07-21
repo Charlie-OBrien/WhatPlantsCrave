@@ -1,0 +1,36 @@
+@page
+@model WhatPlantsCrave.Pages.Views.ProductModelProductDescriptionsModel
+@{
+    ViewData["Title"] = "Product Model Descriptions";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.ProductModelProductDescriptions.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Product Model ID</th>
+                <th>Product Description ID</th>
+                <th>Culture</th>
+                <th>Modified Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ProductModelProductDescriptions)
+            {
+                <tr>
+                    <td>@item.ProductModelId</td>
+                    <td>@item.ProductDescriptionId</td>
+                    <td>@item.Culture</td>
+                    <td>@item.ModifiedDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No product model descriptions found.</div>
+}

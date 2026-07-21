@@ -1,0 +1,40 @@
+@page
+@model WhatPlantsCrave.Pages.Views.SalesOrderDetailsModel
+@{
+    ViewData["Title"] = "Sales Order Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.SalesOrderDetails.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Sales Order ID</th>
+                <th>Detail ID</th>
+                <th>Product ID</th>
+                <th>Order Qty</th>
+                <th>Unit Price</th>
+                <th>Line Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SalesOrderDetails)
+            {
+                <tr>
+                    <td>@item.SalesOrderId</td>
+                    <td>@item.SalesOrderDetailId</td>
+                    <td>@item.ProductId</td>
+                    <td>@item.OrderQty</td>
+                    <td>$@item.UnitPrice.ToString("F2")</td>
+                    <td>$@item.LineTotal.ToString("F2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No sales order details found.</div>
+}

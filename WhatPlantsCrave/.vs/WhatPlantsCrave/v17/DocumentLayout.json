@@ -1,0 +1,255 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\pages\\views\\addresses.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:pages\\views\\addresses.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\pages\\views\\addresses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:pages\\views\\addresses.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\infrastructure\\repositories\\customeraddressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:infrastructure\\repositories\\customeraddressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\infrastructure\\repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:infrastructure\\repositories\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00875A76-F7C2-79A6-9ED9-1295EC22888E}|..\\Brawndo_Components\\Brawndo_Components.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\brawndo_components\\models\\address.model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00875A76-F7C2-79A6-9ED9-1295EC22888E}|..\\Brawndo_Components\\Brawndo_Components.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\brawndo_components\\address.service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00875A76-F7C2-79A6-9ED9-1295EC22888E}|..\\Brawndo_Components\\Brawndo_Components.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\brawndo_components\\customeraddress.service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00875A76-F7C2-79A6-9ED9-1295EC22888E}|..\\Brawndo_Components\\Brawndo_Components.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\brawndo_components\\data\\adventureworkscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|c:\\users\\charl\\source\\repos\\whatplantscraveproject\\whatplantscrave\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9CA5C2A1-B4F8-4ED4-B2E4-3369A778459C}|WhatPlantsCrave.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\charl\\source\\repos\\WhatPlantsCrave\\Brawndo_Components\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Addresses.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Views\\Addresses.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Views\\Addresses.cshtml.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Views\\Addresses.cshtml.cs",
+              "RelativeToolTip": "Pages\\Views\\Addresses.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T02:28:22.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Addresses.cshtml",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Views\\Addresses.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Views\\Addresses.cshtml",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Views\\Addresses.cshtml",
+              "RelativeToolTip": "Pages\\Views\\Addresses.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-21T02:28:20.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-21T02:24:56.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerAddressRepository.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Infrastructure\\Repositories\\CustomerAddressRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\CustomerAddressRepository.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Infrastructure\\Repositories\\CustomerAddressRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\CustomerAddressRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T02:12:29.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerAddress.Service.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\CustomerAddress.Service.cs",
+              "RelativeDocumentMoniker": "..\\Brawndo_Components\\CustomerAddress.Service.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\CustomerAddress.Service.cs",
+              "RelativeToolTip": "..\\Brawndo_Components\\CustomerAddress.Service.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T02:12:20.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddressRepository.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Infrastructure\\Repositories\\AddressRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\AddressRepository.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Infrastructure\\Repositories\\AddressRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\AddressRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAApwCkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T02:09:07.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Address.Service.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\Address.Service.cs",
+              "RelativeDocumentMoniker": "..\\Brawndo_Components\\Address.Service.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\Address.Service.cs",
+              "RelativeToolTip": "..\\Brawndo_Components\\Address.Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:55:35.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Address.Model.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\Models\\Address.Model.cs",
+              "RelativeDocumentMoniker": "..\\Brawndo_Components\\Models\\Address.Model.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\Models\\Address.Model.cs",
+              "RelativeToolTip": "..\\Brawndo_Components\\Models\\Address.Model.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:38:24.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Privacy.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Privacy.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Privacy.cshtml.cs",
+              "RelativeToolTip": "Pages\\Privacy.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T01:00:01.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdventureWorksContext.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\Data\\AdventureWorksContext.cs",
+              "RelativeDocumentMoniker": "..\\Brawndo_Components\\Data\\AdventureWorksContext.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\Brawndo_Components\\Data\\AdventureWorksContext.cs",
+              "RelativeToolTip": "..\\Brawndo_Components\\Data\\AdventureWorksContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T00:49:04.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T00:39:22.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-07-21T00:48:59.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T00:39:19.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCraveProject\\WhatPlantsCrave\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-21T00:39:18.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\charl\\source\\repos\\WhatPlantsCrave\\Brawndo_Components\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\..\\WhatPlantsCrave\\Brawndo_Components\\Class1.cs",
+              "ToolTip": "C:\\Users\\charl\\source\\repos\\WhatPlantsCrave\\Brawndo_Components\\Class1.cs",
+              "RelativeToolTip": "..\\..\\WhatPlantsCrave\\Brawndo_Components\\Class1.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-21T00:24:31.244Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

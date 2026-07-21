@@ -1,0 +1,36 @@
+@page
+@model WhatPlantsCrave.Pages.Views.CustomerAddressesModel
+@{
+    ViewData["Title"] = "Customer Addresses";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.CustomerAddresses.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Customer ID</th>
+                <th>Address ID</th>
+                <th>Address Type</th>
+                <th>Modified Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CustomerAddresses)
+            {
+                <tr>
+                    <td>@item.CustomerId</td>
+                    <td>@item.AddressId</td>
+                    <td>@item.AddressType</td>
+                    <td>@item.ModifiedDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No customer addresses found.</div>
+}

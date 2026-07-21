@@ -1,0 +1,121 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">WhatPlantsCrave</h1>
+    <p>AdventureWorksLT2016 Database Explorer</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Customers</h5>
+                <p class="card-text">View all customers in the database.</p>
+                <a asp-page="/Views/Customers" class="btn btn-primary">View Customers</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Addresses</h5>
+                <p class="card-text">View all addresses in the database.</p>
+                <a asp-page="/Views/Addresses" class="btn btn-primary">View Addresses</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Customer Addresses</h5>
+                <p class="card-text">View customer-address mappings.</p>
+                <a asp-page="/Views/CustomerAddresses" class="btn btn-primary">View Customer Addresses</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Products</h5>
+                <p class="card-text">View all products in the catalog.</p>
+                <a asp-page="/Views/Products" class="btn btn-primary">View Products</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Product Categories</h5>
+                <p class="card-text">View product category hierarchy.</p>
+                <a asp-page="/Views/ProductCategories" class="btn btn-primary">View Categories</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Product Descriptions</h5>
+                <p class="card-text">View product descriptions.</p>
+                <a asp-page="/Views/ProductDescriptions" class="btn btn-primary">View Descriptions</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Product Models</h5>
+                <p class="card-text">View product models.</p>
+                <a asp-page="/Views/ProductModels" class="btn btn-primary">View Models</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Model Descriptions</h5>
+                <p class="card-text">View product model description mappings.</p>
+                <a asp-page="/Views/ProductModelProductDescriptions" class="btn btn-primary">View Model Descriptions</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sales Orders</h5>
+                <p class="card-text">View sales order headers.</p>
+                <a asp-page="/Views/SalesOrderHeaders" class="btn btn-primary">View Orders</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Order Details</h5>
+                <p class="card-text">View sales order line items.</p>
+                <a asp-page="/Views/SalesOrderDetails" class="btn btn-primary">View Order Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Database Test</h5>
+                <p class="card-text">Test database connectivity.</p>
+                <a asp-page="/DbTest" class="btn btn-outline-secondary">Connection Test</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Products (Test)</h5>
+                <p class="card-text">Direct EF Core product query.</p>
+                <a asp-page="/Privacy" class="btn btn-outline-secondary">View Test Page</a>
+            </div>
+        </div>
+    </div>
+</div>

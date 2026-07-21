@@ -1,0 +1,26 @@
+@page
+@model DbTestModel
+@{
+    ViewData["Title"] = "Database Connection Test";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Database Connection Test</h1>
+
+    @if (Model.IsConnected)
+    {
+        <div class="alert alert-success" role="alert">
+            <strong>Success!</strong> Database connection established.
+            <br />
+            <small>@Model.ConnectionMessage</small>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger" role="alert">
+            <strong>Failed!</strong> Could not connect to database.
+            <br />
+            <small>@Model.ErrorMessage</small>
+        </div>
+    }
+</div>

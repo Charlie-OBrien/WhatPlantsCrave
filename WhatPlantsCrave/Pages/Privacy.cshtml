@@ -1,0 +1,47 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Products Catalog";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Products != null && Model.Products.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Product Number</th>
+                <th>Color</th>
+                <th>Standard Cost</th>
+                <th>List Price</th>
+                <th>Size</th>
+                <th>Weight</th>
+                <th>Start Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.ProductId</td>
+                    <td>@product.Name</td>
+                    <td>@product.ProductNumber</td>
+                    <td>@(string.IsNullOrEmpty(product.Color) ? "N/A" : product.Color)</td>
+                    <td>$@product.StandardCost.ToString("F2")</td>
+                    <td>$@product.ListPrice.ToString("F2")</td>
+                    <td>@(string.IsNullOrEmpty(product.Size) ? "N/A" : product.Size)</td>
+                    <td>@(product.Weight.HasValue ? product.Weight.Value.ToString("F2") + " lbs" : "N/A")</td>
+                    <td>@product.SellStartDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        <strong>No products found.</strong> The database may be empty or there was an error loading products.
+    </div>
+}

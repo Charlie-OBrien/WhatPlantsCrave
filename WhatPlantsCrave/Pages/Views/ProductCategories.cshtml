@@ -1,0 +1,36 @@
+@page
+@model WhatPlantsCrave.Pages.Views.ProductCategoriesModel
+@{
+    ViewData["Title"] = "Product Categories";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.ProductCategories.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Parent Category ID</th>
+                <th>Modified Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ProductCategories)
+            {
+                <tr>
+                    <td>@item.ProductCategoryId</td>
+                    <td>@item.Name</td>
+                    <td>@(item.ParentProductCategoryId?.ToString() ?? "N/A")</td>
+                    <td>@item.ModifiedDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No product categories found.</div>
+}

@@ -1,0 +1,38 @@
+@page
+@model WhatPlantsCrave.Pages.Views.SalesOrderHeadersModel
+@{
+    ViewData["Title"] = "Sales Orders";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.SalesOrderHeaders.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Sales Order ID</th>
+                <th>Order Date</th>
+                <th>Customer ID</th>
+                <th>Status</th>
+                <th>Total Due</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SalesOrderHeaders)
+            {
+                <tr>
+                    <td>@item.SalesOrderId</td>
+                    <td>@item.OrderDate.ToString("yyyy-MM-dd")</td>
+                    <td>@item.CustomerId</td>
+                    <td>@item.Status</td>
+                    <td>$@item.TotalDue.ToString("F2")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">No sales orders found.</div>
+}
