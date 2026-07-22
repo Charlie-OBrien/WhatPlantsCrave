@@ -3,21 +3,20 @@ using Brawndo_Components.Data;
 using Brawndo_Components.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Data;
 
 namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
 {
-    /// <summary>
-    /// Production repository implementation using SQL Server stored procedures.
-    /// Executes actual database operations via ADO.NET.
-    /// </summary>
     public class SqlProductRepository : IProductRepository
     {
         private readonly AdventureWorksContext _context;
+        private readonly ILogger<SqlProductRepository> _logger;
 
-        public SqlProductRepository(AdventureWorksContext context)
+        public SqlProductRepository(AdventureWorksContext context, ILogger<SqlProductRepository> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public int Create(string name, string productNumber, decimal standardCost, decimal listPrice, DateTime sellStartDate, string? color = null, string? size = null, decimal? weight = null, int? productCategoryId = null, int? productModelId = null, DateTime? sellEndDate = null, DateTime? discontinuedDate = null, string? thumbnailPhotoFileName = null)
@@ -46,8 +45,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 command.ExecuteNonQuery();
                 return (int)outputParam.Value;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to create product {Name}", name);
                 return -1;
             }
         }
@@ -64,8 +64,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 command.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to delete product {ProductId}", productId);
                 return false;
             }
         }
@@ -81,8 +82,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 using var reader = command.ExecuteReader();
                 return ReadProducts(reader);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to get active products");
                 return new List<Product>();
             }
         }
@@ -98,8 +100,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 using var reader = command.ExecuteReader();
                 return ReadProducts(reader);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to get all products");
                 return new List<Product>();
             }
         }
@@ -117,8 +120,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 var products = ReadProducts(reader);
                 return products.FirstOrDefault();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to get product {ProductId}", productId);
                 return null;
             }
         }
@@ -135,8 +139,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 using var reader = command.ExecuteReader();
                 return ReadProducts(reader);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to search products by name {SearchTerm}", searchTerm);
                 return new List<Product>();
             }
         }
@@ -157,8 +162,9 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
                 command.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, "Failed to update product {ProductId}", productId);
                 return false;
             }
         }

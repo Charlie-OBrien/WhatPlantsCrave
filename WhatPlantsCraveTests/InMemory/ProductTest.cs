@@ -1,9 +1,15 @@
-using Brawndo_Components.Models;
+﻿using Brawndo_Components.Models;
 using WhatPlantsCrave.Infrastructure.Repositories;
 using WhatPlantsCrave.Infrastructure.Repositories.InMemory;
 
-namespace WhatPlantsCraveTests
+namespace WhatPlantsCraveTests.InMemory
 {
+    /// <summary>
+    /// In Memory Product Repository Tests
+    /// Model: Brawndo_Components/Models/Product.cs
+    /// Service: Brawndo_Components/Product.Service.cs
+    /// Repository: WhatPlantsCrave.Infrastructure.Repositories.InMemory/InMemoryProductRepository.cs
+    /// </summary>
     public class ProductRepositoryTest
     {
         [Fact]

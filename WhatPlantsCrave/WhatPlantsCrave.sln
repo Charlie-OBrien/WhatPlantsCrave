@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatPlantsCrave", "WhatPlan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brawndo_Components", "..\Brawndo_Components\Brawndo_Components.csproj", "{00875A76-F7C2-79A6-9ED9-1295EC22888E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatPlantsCraveTests", "..\WhatPlantsCraveTests\WhatPlantsCraveTests.csproj", "{CEBEE35E-6FCC-4302-B4C5-CEA5AA767228}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{00875A76-F7C2-79A6-9ED9-1295EC22888E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00875A76-F7C2-79A6-9ED9-1295EC22888E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00875A76-F7C2-79A6-9ED9-1295EC22888E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBEE35E-6FCC-4302-B4C5-CEA5AA767228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBEE35E-6FCC-4302-B4C5-CEA5AA767228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBEE35E-6FCC-4302-B4C5-CEA5AA767228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBEE35E-6FCC-4302-B4C5-CEA5AA767228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

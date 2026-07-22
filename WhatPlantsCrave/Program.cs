@@ -1,6 +1,7 @@
 using Brawndo_Components;
 using Brawndo_Components.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using WhatPlantsCrave.Infrastructure.Repositories;
 using WhatPlantsCrave.Infrastructure.Repositories.Sql;
 
@@ -11,6 +12,13 @@ namespace WhatPlantsCrave
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Host.UseSerilog((context, configuration) => configuration
+                .ReadFrom.Configuration(context.Configuration)
+                .WriteTo.Console()
+                .WriteTo.File("logs/log-.txt",
+                    rollingInterval: RollingInterval.Day,
+                    retainedFileCountLimit: 30));
 
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("AdventureWorksConnection");
