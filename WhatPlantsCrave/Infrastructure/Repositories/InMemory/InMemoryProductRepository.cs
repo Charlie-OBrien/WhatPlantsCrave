@@ -1,6 +1,6 @@
 using Brawndo_Components.Models;
 
-namespace WhatPlantsCrave.Infrastructure.Repositories
+namespace WhatPlantsCrave.Infrastructure.Repositories.InMemory
 {
     /// <summary>
     /// Test/mock repository implementation that stores data in memory.

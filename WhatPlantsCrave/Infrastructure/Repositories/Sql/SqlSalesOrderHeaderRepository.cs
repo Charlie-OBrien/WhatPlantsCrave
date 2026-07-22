@@ -5,7 +5,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
-namespace WhatPlantsCrave.Infrastructure.Repositories
+namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
 {
     /// <summary>
     /// SalesOrderHeader repository implementation using SQL Server stored procedures.
