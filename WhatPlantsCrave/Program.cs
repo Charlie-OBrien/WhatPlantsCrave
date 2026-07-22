@@ -27,19 +27,18 @@ namespace WhatPlantsCrave
             builder.Services.AddScoped<ISalesOrderDetailService, SalesOrderDetailService>();
             builder.Services.AddScoped<ISalesOrderHeaderService, SalesOrderHeaderService>();
 
-            builder.Services.AddScoped<IAddressRepository, AddressRepository>();
-            builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
-            builder.Services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
-
-            // Use SqlProductRepository for production (stored procedures)
-            // To use InMemoryProductRepository for testing, change this line:
+            // Repository registrations using SQL (production) implementations
+            // Each can be swapped with InMemoryXxxRepository for testing without database
+            builder.Services.AddScoped<IAddressRepository, SqlAddressRepository>();
+            builder.Services.AddScoped<ICustomerRepository, SqlCustomerRepository>();
+            builder.Services.AddScoped<ICustomerAddressRepository, SqlCustomerAddressRepository>();
             builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
-            builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
-            builder.Services.AddScoped<IProductDescriptionRepository, ProductDescriptionRepository>();
-            builder.Services.AddScoped<IProductModelRepository, ProductModelRepository>();
-            builder.Services.AddScoped<IProductModelProductDescriptionRepository, ProductModelProductDescriptionRepository>();
-            builder.Services.AddScoped<ISalesOrderDetailRepository, SalesOrderDetailRepository>();
-            builder.Services.AddScoped<ISalesOrderHeaderRepository, SalesOrderHeaderRepository>();
+            builder.Services.AddScoped<IProductCategoryRepository, SqlProductCategoryRepository>();
+            builder.Services.AddScoped<IProductDescriptionRepository, SqlProductDescriptionRepository>();
+            builder.Services.AddScoped<IProductModelRepository, SqlProductModelRepository>();
+            builder.Services.AddScoped<IProductModelProductDescriptionRepository, SqlProductModelProductDescriptionRepository>();
+            builder.Services.AddScoped<ISalesOrderDetailRepository, SqlSalesOrderDetailRepository>();
+            builder.Services.AddScoped<ISalesOrderHeaderRepository, SqlSalesOrderHeaderRepository>();
 
             builder.Services.AddRazorPages();
 
