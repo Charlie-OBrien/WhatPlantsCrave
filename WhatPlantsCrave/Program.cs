@@ -30,7 +30,10 @@ namespace WhatPlantsCrave
             builder.Services.AddScoped<IAddressRepository, AddressRepository>();
             builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
             builder.Services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
-            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+            // Use SqlProductRepository for production (stored procedures)
+            // To use InMemoryProductRepository for testing, change this line:
+            builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
             builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
             builder.Services.AddScoped<IProductDescriptionRepository, ProductDescriptionRepository>();
             builder.Services.AddScoped<IProductModelRepository, ProductModelRepository>();
