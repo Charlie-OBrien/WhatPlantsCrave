@@ -1,7 +1,6 @@
-using Brawndo_Components.Data;
 using Brawndo_Components.Models;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace Brawndo_Components
@@ -18,18 +17,18 @@ namespace Brawndo_Components
 
     public class SalesOrderHeaderService : ISalesOrderHeaderService
     {
-        private readonly AdventureWorksContext _context;
+        private readonly string _connectionString;
 
-        public SalesOrderHeaderService(AdventureWorksContext context)
+        public SalesOrderHeaderService(IConfiguration configuration)
         {
-            _context = context;
+            _connectionString = configuration.GetConnectionString("AdventureWorksConnection") ?? throw new InvalidOperationException("Connection string 'AdventureWorksConnection' not found.");
         }
 
         public int Create(byte revisionNumber, DateTime orderDate, DateTime dueDate, int customerId, string shipMethod, decimal subTotal, decimal taxAmt, decimal freight)
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_SalesOrderHeader_Create", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -56,7 +55,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_SalesOrderHeader_Delete", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -74,7 +73,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_SalesOrderHeader_GetAll", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -104,7 +103,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_SalesOrderHeader_GetByCustomer", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -135,7 +134,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_SalesOrderHeader_GetByID", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -170,7 +169,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_SalesOrderHeader_Update", connection);
                 command.CommandType = CommandType.StoredProcedure;

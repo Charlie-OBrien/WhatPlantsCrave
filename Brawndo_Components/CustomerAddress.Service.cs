@@ -1,7 +1,6 @@
-using Brawndo_Components.Data;
 using Brawndo_Components.Models;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace Brawndo_Components
@@ -18,18 +17,18 @@ namespace Brawndo_Components
 
     public class CustomerAddressService : ICustomerAddressService
     {
-        private readonly AdventureWorksContext _context;
+        private readonly string _connectionString;
 
-        public CustomerAddressService(AdventureWorksContext context)
+        public CustomerAddressService(IConfiguration configuration)
         {
-            _context = context;
+            _connectionString = configuration.GetConnectionString("AdventureWorksConnection") ?? throw new InvalidOperationException("Connection string 'AdventureWorksConnection' not found.");
         }
 
         public bool Create(int customerId, int addressId, string addressType)
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_CustomerAddress_Create", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -49,7 +48,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_CustomerAddress_Delete", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -68,7 +67,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_CustomerAddress_Get", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -97,7 +96,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_CustomerAddress_GetAll", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -125,7 +124,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_CustomerAddress_GetByCustomer", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -159,7 +158,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_CustomerAddress_Update", connection);
                 command.CommandType = CommandType.StoredProcedure;

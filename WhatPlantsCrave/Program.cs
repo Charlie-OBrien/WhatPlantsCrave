@@ -1,6 +1,4 @@
 using Brawndo_Components;
-using Brawndo_Components.Data;
-using Microsoft.EntityFrameworkCore;
 using WhatPlantsCrave.Infrastructure.Repositories;
 
 namespace WhatPlantsCrave
@@ -12,10 +10,6 @@ namespace WhatPlantsCrave
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("AdventureWorksConnection");
-            builder.Services.AddDbContext<AdventureWorksContext>(options =>
-                options.UseSqlServer(connectionString));
-
             builder.Services.AddScoped<IAddressService, AddressService>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
             builder.Services.AddScoped<ICustomerAddressService, CustomerAddressService>();
@@ -30,7 +24,15 @@ namespace WhatPlantsCrave
             builder.Services.AddScoped<IAddressRepository, AddressRepository>();
             builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
             builder.Services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
-            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+            // Example: Decorator pattern - ProductRepository wrapped with logging
+            builder.Services.AddScoped<IProductRepository>(sp =>
+                new LoggingProductRepository(
+                    new ProductRepository(sp.GetRequiredService<IProductService>()),
+                    sp.GetRequiredService<ILogger<LoggingProductRepository>>()
+                )
+            );
+
             builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
             builder.Services.AddScoped<IProductDescriptionRepository, ProductDescriptionRepository>();
             builder.Services.AddScoped<IProductModelRepository, ProductModelRepository>();
