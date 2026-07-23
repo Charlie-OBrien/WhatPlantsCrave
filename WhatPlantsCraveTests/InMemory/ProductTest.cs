@@ -17,7 +17,7 @@ namespace WhatPlantsCraveTests.InMemory
         {
             var repository = new InMemoryProductRepository();
             int productId = repository.Create(
-                "Test Widget", "TST-001", 10m, 20m, DateTime.Now);
+                name: "Test Widget", productNumber: "TST-001", standardCost: 10m, listPrice: 20m, sellStartDate: DateTime.Now);
             Assert.True(productId > 0);
             var product = repository.GetByID(productId);
             Assert.NotNull(product);
@@ -28,8 +28,8 @@ namespace WhatPlantsCraveTests.InMemory
         public void GetAll_ReturnsMultipleProducts()
         {
             var repository = new InMemoryProductRepository();
-            repository.Create("Widget", "WDG-001", 10m, 20m, DateTime.Now);
-            repository.Create("Gadget", "GDG-001", 15m, 30m, DateTime.Now);
+            repository.Create(name: "Widget", productNumber: "WDG-001", standardCost: 10m, listPrice: 20m, sellStartDate: DateTime.Now);
+            repository.Create(name: "Gadget", productNumber: "GDG-001", standardCost: 15m, listPrice: 30m, sellStartDate: DateTime.Now);
             var products = repository.GetAll();
             Assert.Equal(2, products.Count);
         }
@@ -38,8 +38,8 @@ namespace WhatPlantsCraveTests.InMemory
         public void Update_ModifiesProductData()
         {
             var repository = new InMemoryProductRepository();
-            int id = repository.Create("Original", "ORG-001", 10m, 20m, DateTime.Now);
-            bool updated = repository.Update(id, "Updated", listPrice: 25m);
+            int id = repository.Create(name: "Original", productNumber: "ORG-001", standardCost: 10m, listPrice: 20m, sellStartDate: DateTime.Now);
+            bool updated = repository.Update(id, name: "Updated", listPrice: 25m);
             Assert.True(updated);
             var product = repository.GetByID(id);
             Assert.Equal("Updated", product.Name);
@@ -49,7 +49,7 @@ namespace WhatPlantsCraveTests.InMemory
         public void Delete_RemovesProduct()
         {
             var repository = new InMemoryProductRepository();
-            int id = repository.Create("ToDelete", "DEL-001", 10m, 20m, DateTime.Now);
+            int id = repository.Create(name: "ToDelete", productNumber: "DEL-001", standardCost: 10m, listPrice: 20m, sellStartDate: DateTime.Now);
             bool deleted = repository.Delete(id);
             Assert.True(deleted);
             Assert.Null(repository.GetByID(id));
@@ -59,9 +59,9 @@ namespace WhatPlantsCraveTests.InMemory
         public void GetByPriceRange_FiltersProductsCorrectly()
         {
             var repository = new InMemoryProductRepository();
-            repository.Create("Budget Bike", "BUDGET-001", 50m, 100m, DateTime.Now);    // Below minPrice
-            repository.Create("Mid-Range Bike", "MID-001", 200m, 400m, DateTime.Now);   // Within range
-            repository.Create("Premium Bike", "PREMIUM-001", 500m, 1000m, DateTime.Now); // To high on the maxPrice side
+            repository.Create(name: "Budget Bike", productNumber: "BUDGET-001", standardCost: 50m, listPrice: 100m, sellStartDate: DateTime.Now);    // Below minPrice
+            repository.Create(name: "Mid-Range Bike", productNumber: "MID-001", standardCost: 200m, listPrice: 400m, sellStartDate: DateTime.Now);   // Within range
+            repository.Create(name: "Premium Bike", productNumber: "PREMIUM-001", standardCost: 500m, listPrice: 1000m, sellStartDate: DateTime.Now); // To high on the maxPrice side
 
             var results = repository.GetByPriceRange(minPrice: 200m, maxPrice: 900m);
 
