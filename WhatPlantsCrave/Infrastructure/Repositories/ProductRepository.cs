@@ -12,6 +12,8 @@ namespace WhatPlantsCrave.Infrastructure.Repositories
         Product? GetByID(int productId);
         List<Product> SearchByName(string searchTerm);
         bool Update(int productId, string? name = null, decimal? standardCost = null, decimal? listPrice = null, string? color = null);
+
+        List<Product> GetByPriceRange(decimal minPrice, decimal maxPrice);
     }
 
     public class ProductRepository : IProductRepository
@@ -43,5 +45,11 @@ namespace WhatPlantsCrave.Infrastructure.Repositories
 
         public bool Update(int productId, string? name = null, decimal? standardCost = null, decimal? listPrice = null, string? color = null)
             => _service.Update(productId, name, standardCost, listPrice, color);
+
+        public List<Product> GetByPriceRange(decimal minPrice, decimal maxPrice)
+        {
+            return _service.GetByPriceRange(minPrice, maxPrice);
+        }
+           
     }
 }

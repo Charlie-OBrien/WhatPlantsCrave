@@ -54,5 +54,24 @@ namespace WhatPlantsCraveTests.InMemory
             Assert.True(deleted);
             Assert.Null(repository.GetByID(id));
         }
-    }
-}
+
+        [Fact]
+        public void GetByPriceRange_FiltersProductsCorrectly()
+        {
+            var repository = new InMemoryProductRepository();
+            repository.Create("Budget Bike", "BUDGET-001", 50m, 100m, DateTime.Now);    // Below minPrice
+            repository.Create("Mid-Range Bike", "MID-001", 200m, 400m, DateTime.Now);   // Within range
+            repository.Create("Premium Bike", "PREMIUM-001", 500m, 1000m, DateTime.Now); // To high on the maxPrice side
+
+            var results = repository.GetByPriceRange(minPrice: 200m, maxPrice: 900m);
+
+            Assert.Equal(2, results.Count);
+            Assert.Contains(results, p => p.Name == "Premium Bike");
+            Assert.Contains(results, p => p.Name == "Mid-Range Bike");
+            Assert.DoesNotContain(results, r => r.Name == "Budget Bike");
+        }
+
+
+
+    }//END Class    
+}//END Namespace

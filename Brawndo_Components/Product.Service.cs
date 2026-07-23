@@ -15,6 +15,8 @@ namespace Brawndo_Components
         Product? GetByID(int productId);
         List<Product> SearchByName(string searchTerm);
         bool Update(int productId, string? name = null, decimal? standardCost = null, decimal? listPrice = null, string? color = null);
+
+        List<Product> GetByPriceRange(decimal minPrice, decimal maxPrice);
     }
 
     public class ProductService : IProductService
@@ -196,5 +198,25 @@ namespace Brawndo_Components
             }
             return results;
         }
-    }
-}
+
+        public List<Product> GetByPriceRange(decimal minPrice, decimal maxPrice)
+        {
+            try
+            {
+                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                connection.Open();
+                using var command = new SqlCommand("SalesLT.usp_Product_GetByPriceRange", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MinPrice", minPrice);
+                command.Parameters.AddWithValue("@MaxPrice", maxPrice);
+                using var reader = command.ExecuteReader();
+                return ReadProducts(reader);
+            }
+            catch (Exception)
+            {
+                return new List<Product>();
+            }
+        }
+
+    }//END CLASS
+}//END NAMESPACE

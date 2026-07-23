@@ -196,5 +196,27 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.Sql
             }
             return results;
         }
-    }
-}
+    
+        public List<Product> GetByPriceRange(decimal minPrice, decimal maxPrice)
+        {
+            try
+            {
+                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                connection.Open();
+                using var command = new SqlCommand("SalesLT.usp_Product_GetByPriceRange", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MinPrice", minPrice);
+                command.Parameters.AddWithValue("@MaxPrice", maxPrice);
+                using var reader = command.ExecuteReader();
+                return ReadProducts(reader);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to get products by price range {MinPrice} - {MaxPrice}", minPrice, maxPrice);
+                return new List<Product>();
+            }
+        }
+
+
+    }//END Class
+}//END Namespace

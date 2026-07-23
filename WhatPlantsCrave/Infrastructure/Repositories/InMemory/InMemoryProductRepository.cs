@@ -69,5 +69,17 @@ namespace WhatPlantsCrave.Infrastructure.Repositories.InMemory
 
             return true;
         }
-    }
-}
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="minPrice"></param>
+        /// <param name="maxPrice"></param>
+        /// <returns></returns>
+        public List<Product> GetByPriceRange(decimal minPrice, decimal maxPrice)
+        {
+            return _products.Where(p => p.ListPrice >= minPrice && p.ListPrice <= maxPrice).ToList();
+        }
+
+    }//END Class
+}//END Namespace
