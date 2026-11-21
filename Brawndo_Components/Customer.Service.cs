@@ -1,7 +1,6 @@
-using Brawndo_Components.Data;
 using Brawndo_Components.Models;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace Brawndo_Components
@@ -19,18 +18,18 @@ namespace Brawndo_Components
 
     public class CustomerService : ICustomerService
     {
-        private readonly AdventureWorksContext _context;
+        private readonly string _connectionString;
 
-        public CustomerService(AdventureWorksContext context)
+        public CustomerService(IConfiguration configuration)
         {
-            _context = context;
+            _connectionString = configuration.GetConnectionString("AdventureWorksConnection") ?? throw new InvalidOperationException("Connection string 'AdventureWorksConnection' not found.");
         }
 
         public int Create(bool nameStyle, string firstName, string lastName, string passwordHash, string passwordSalt, string? title = null, string? middleName = null, string? emailAddress = null, string? phone = null, string? companyName = null)
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_Create", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -59,7 +58,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_Delete", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -77,7 +76,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_GetAll", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -112,7 +111,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_GetByEmail", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -141,7 +140,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_GetByID", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -178,7 +177,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_SearchByName", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -209,7 +208,7 @@ namespace Brawndo_Components
         {
             try
             {
-                using var connection = new SqlConnection(_context.Database.GetConnectionString());
+                using var connection = new SqlConnection(_connectionString);
                 connection.Open();
                 using var command = new SqlCommand("SalesLT.usp_Customer_Update", connection);
                 command.CommandType = CommandType.StoredProcedure;

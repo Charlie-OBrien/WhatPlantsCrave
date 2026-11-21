@@ -21,10 +21,6 @@ namespace WhatPlantsCrave
                     retainedFileCountLimit: 30));
 
             // Add services to the container.
-            var connectionString = builder.Configuration.GetConnectionString("AdventureWorksConnection");
-            builder.Services.AddDbContext<AdventureWorksContext>(options =>
-                options.UseSqlServer(connectionString));
-
             builder.Services.AddScoped<IAddressService, AddressService>();
             builder.Services.AddScoped<ICustomerService, CustomerService>();
             builder.Services.AddScoped<ICustomerAddressService, CustomerAddressService>();
@@ -36,8 +32,24 @@ namespace WhatPlantsCrave
             builder.Services.AddScoped<ISalesOrderDetailService, SalesOrderDetailService>();
             builder.Services.AddScoped<ISalesOrderHeaderService, SalesOrderHeaderService>();
 
-            // Repository registrations using SQL (production) implementations
-            // Each can be swapped with InMemoryXxxRepository for testing without database
+            builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+            builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+            builder.Services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
+
+            // Example: Decorator pattern - ProductRepository wrapped with logging
+            builder.Services.AddScoped<IProductRepository>(sp =>
+                new LoggingProductRepository(
+                    new ProductRepository(sp.GetRequiredService<IProductService>()),
+                    sp.GetRequiredService<ILogger<LoggingProductRepository>>()
+                )
+            );
+
+            builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
+            builder.Services.AddScoped<IProductDescriptionRepository, ProductDescriptionRepository>();
+            builder.Services.AddScoped<IProductModelRepository, ProductModelRepository>();
+            builder.Services.AddScoped<IProductModelProductDescriptionRepository, ProductModelProductDescriptionRepository>();
+            builder.Services.AddScoped<ISalesOrderDetailRepository, SalesOrderDetailRepository>();
+            builder.Services.AddScoped<ISalesOrderHeaderRepository, SalesOrderHeaderRepository>();
             builder.Services.AddScoped<IAddressRepository, SqlAddressRepository>();
             builder.Services.AddScoped<ICustomerRepository, SqlCustomerRepository>();
             builder.Services.AddScoped<ICustomerAddressRepository, SqlCustomerAddressRepository>();
